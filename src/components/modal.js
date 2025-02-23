@@ -8,8 +8,7 @@ const handleEscKeyUp = (evt) => {
 };
 
 export const handleOverlayClick = (evt) => {
-  const openPopup = document.querySelector(".popup_is-opened");
-  if (openPopup) {
+  if (evt.target.classList.contains("popup_is-opened")) {
     closeModal(evt.target)
   }
 }
